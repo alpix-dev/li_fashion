@@ -67,10 +67,10 @@ theme.newsletter = $('<div></div>').append($('#barraNewsletter').clone()).html()
 
 theme.icon = {};
 theme.icon.sideCartClose = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="arrow-back"><rect width="24" height="24" transform="rotate(90 12 12)" opacity="0"/><path d="M19 11H7.14l3.63-4.36a1 1 0 1 0-1.54-1.28l-5 6a1.19 1.19 0 0 0-.09.15c0 .05 0 .08-.07.13A1 1 0 0 0 4 12a1 1 0 0 0 .07.36c0 .05 0 .08.07.13a1.19 1.19 0 0 0 .09.15l5 6A1 1 0 0 0 10 19a1 1 0 0 0 .64-.23 1 1 0 0 0 .13-1.41L7.14 13H19a1 1 0 0 0 0-2z"/></g></g></svg>';
-theme.icon.cart = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="shopping-cart"><rect width="24" height="24" opacity="0"/><path d="M21.08 7a2 2 0 0 0-1.7-1H6.58L6 3.74A1 1 0 0 0 5 3H3a1 1 0 0 0 0 2h1.24L7 15.26A1 1 0 0 0 8 16h9a1 1 0 0 0 .89-.55l3.28-6.56A2 2 0 0 0 21.08 7zm-4.7 7H8.76L7.13 8h12.25z"/><circle cx="7.5" cy="19.5" r="1.5"/><circle cx="17.5" cy="19.5" r="1.5"/></g></g></svg>';
-theme.icon.wishlist = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="heart"><rect width="24" height="24" opacity="0"/><path d="M12 21a1 1 0 0 1-.71-.29l-7.77-7.78a5.26 5.26 0 0 1 0-7.4 5.24 5.24 0 0 1 7.4 0L12 6.61l1.08-1.08a5.24 5.24 0 0 1 7.4 0 5.26 5.26 0 0 1 0 7.4l-7.77 7.78A1 1 0 0 1 12 21zM7.22 6a3.2 3.2 0 0 0-2.28.94 3.24 3.24 0 0 0 0 4.57L12 18.58l7.06-7.07a3.24 3.24 0 0 0 0-4.57 3.32 3.32 0 0 0-4.56 0l-1.79 1.8a1 1 0 0 1-1.42 0L9.5 6.94A3.2 3.2 0 0 0 7.22 6z"/></g></g></svg>';
-theme.icon.search = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="search"><rect width="24" height="24" opacity="0"/><path d="M20.71 19.29l-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 11a6 6 0 1 1 6 6 6 6 0 0 1-6-6z"/></g></g></svg>';
-theme.icon.account = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="person"><rect width="24" height="24" opacity="0"/><path d="M12 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0-6a2 2 0 1 1-2 2 2 2 0 0 1 2-2z"/><path d="M12 13a7 7 0 0 0-7 7 1 1 0 0 0 2 0 5 5 0 0 1 10 0 1 1 0 0 0 2 0 7 7 0 0 0-7-7z"/></g></g></svg>';
+theme.icon.cart = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 10H21M3 10L5 20H19L21 10M3 10L9 4M21 10L15 4" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+theme.icon.wishlist = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.3314 12.0474L12 20L19.6686 12.0474C20.5211 11.1633 21 9.96429 21 8.71405C21 6.11055 18.9648 4 16.4543 4C15.2487 4 14.0925 4.49666 13.24 5.38071L12 6.66667L10.76 5.38071C9.90749 4.49666 8.75128 4 7.54569 4C5.03517 4 3 6.11055 3 8.71405C3 9.96429 3.47892 11.1633 4.3314 12.0474Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+theme.icon.search = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.4697 20.5303C19.7626 20.8232 20.2374 20.8232 20.5303 20.5303C20.8232 20.2374 20.8232 19.7626 20.5303 19.4697L19.4697 20.5303ZM17.25 10.5C17.25 14.2279 14.2279 17.25 10.5 17.25V18.75C15.0563 18.75 18.75 15.0563 18.75 10.5H17.25ZM10.5 17.25C6.77208 17.25 3.75 14.2279 3.75 10.5H2.25C2.25 15.0563 5.94365 18.75 10.5 18.75V17.25ZM3.75 10.5C3.75 6.77208 6.77208 3.75 10.5 3.75V2.25C5.94365 2.25 2.25 5.94365 2.25 10.5H3.75ZM10.5 3.75C14.2279 3.75 17.25 6.77208 17.25 10.5H18.75C18.75 5.94365 15.0563 2.25 10.5 2.25V3.75ZM20.5303 19.4697L16.3428 15.2821L15.2821 16.3428L19.4697 20.5303L20.5303 19.4697Z" fill="black"/></svg>';
+theme.icon.account = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 theme.icon.newsletter = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="email"><rect width="24" height="24" opacity="0"/><path d="M19 4H5a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-.67 2L12 10.75 5.67 6zM19 18H5a1 1 0 0 1-1-1V7.25l7.4 5.55a1 1 0 0 0 .6.2 1 1 0 0 0 .6-.2L20 7.25V17a1 1 0 0 1-1 1z"/></g></g></svg>';
 theme.icon.filter = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="funnel"><rect width="24" height="24" opacity="0"/><path d="M13.9 22a1 1 0 0 1-.6-.2l-4-3.05a1 1 0 0 1-.39-.8v-3.27l-4.8-9.22A1 1 0 0 1 5 4h14a1 1 0 0 1 .86.49 1 1 0 0 1 0 1l-5 9.21V21a1 1 0 0 1-.55.9 1 1 0 0 1-.41.1zm-3-4.54l2 1.53v-4.55A1 1 0 0 1 13 14l4.3-8H6.64l4.13 8a1 1 0 0 1 .11.46z"/></g></g></svg>';
 theme.icon.seeMore = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="eye"><rect width="24" height="24" opacity="0"/><path d="M21.87 11.5c-.64-1.11-4.16-6.68-10.14-6.5-5.53.14-8.73 5-9.6 6.5a1 1 0 0 0 0 1c.63 1.09 4 6.5 9.89 6.5h.25c5.53-.14 8.74-5 9.6-6.5a1 1 0 0 0 0-1zM12.22 17c-4.31.1-7.12-3.59-8-5 1-1.61 3.61-4.9 7.61-5 4.29-.11 7.11 3.59 8 5-1.03 1.61-3.61 4.9-7.61 5z"/><path d="M12 8.5a3.5 3.5 0 1 0 3.5 3.5A3.5 3.5 0 0 0 12 8.5zm0 5a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5z"/></g></g></svg>';
@@ -283,6 +283,14 @@ theme.functions.resizeBanners = function(){
 
     })
 };
+
+theme.functions.blockPage = function (status){
+    if(status){
+        $('body').append('<div id="apx_loader"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>');
+    }else{
+        $('#apx_loader').remove();
+    }   
+};
 // theme.functions.search = function(){
 //     $('.search-trigger').click(function(){
 //         $(this).toggleClass('open');
@@ -379,6 +387,7 @@ theme.functions.sideCartScroll = function(){
 theme.functions.sideCartActions = function(html){
     $(document).on("click", "#theme_sideCart .table-body .excluir a, #theme_sideCart .table-body .quantidade a:not(.atualizar-quantidade), #theme_sideCart .cupom-sucesso a", function(p) {
         p.preventDefault();
+        theme.functions.blockPage(true);
         var n = $(this);
         var o = $(this).attr("href");
         $.ajax({
@@ -388,7 +397,7 @@ theme.functions.sideCartActions = function(html){
             $("#carrinho-mini").load("/carrinho/mini", function() {})
         }).fail(function(q) {
             window.location = o
-        }).always(function() {})
+        }).always(function() { theme.functions.blockPage(false); })
     });
 
     $('body').on('click','#theme_sideCart [for="usarCupom"]',function(){
@@ -651,9 +660,9 @@ theme.worker.sizeTable.run = function(el){
 
 theme.worker.checkoutExtraFields = {};
 theme.worker.checkoutExtraFields.list = [];
-//theme.worker.checkoutExtraFields.list.push({label : 'De:',id:'de',type: 'text',required : true});
-//theme.worker.checkoutExtraFields.list.push({label : 'Para:',id:'para',type: 'text',required : true});
-//theme.worker.checkoutExtraFields.list.push({label : 'Mensagem:',id:'mensagem',type: 'date',required : true});
+theme.worker.checkoutExtraFields.list.push({label : 'De:',id:'de',type: 'text',required : true});
+theme.worker.checkoutExtraFields.list.push({label : 'Para:',id:'para',type: 'text',required : true});
+theme.worker.checkoutExtraFields.list.push({label : 'Data:',id:'data',type: 'date',required : true});
 theme.worker.checkoutExtraFields.match = $('.pagina-carrinho.carrinho-checkout').length > 0;
 theme.worker.checkoutExtraFields.run = function(el){
     $('#formularioObservacao').hide();
@@ -664,13 +673,13 @@ theme.worker.checkoutExtraFields.run = function(el){
     });
     themeCheckoutExtraFields.insertBefore('#formularioObservacao');
     
-    $('#finalizarCompra').click(function(){
+    $('.theme_worker-checkoutExtraFields .theme-customInputElement [name^="theme_field"]').change(function(){
         var themeCheckoutFieldValues = "";
         $('.theme_worker-checkoutExtraFields .theme-customInputElement').each(function(){
-            themeCheckoutFieldValues = themeCheckoutFieldValues + $(this).find('label').text() + ' ' +  + $(this).find('input, textarea, select').val();
+            themeCheckoutFieldValues = themeCheckoutFieldValues + $(this).find('label').text() + ' ' +  $(this).find('[name^="theme_field"]').val() + '\n';
         })
         $('[name="cliente_obs"]').val(themeCheckoutFieldValues);
-    });    
+    });
     console.log('theme.worker.checkoutExtraFields OK');
 }
 
@@ -684,101 +693,98 @@ theme.worker.productTimer.run = function(el){
 
 };
 
-theme.worker.testimonials = {};
-theme.worker.testimonials.list = [];
-theme.worker.testimonials.list.push({name : "Mariana",rating: 5, description: "Estou usando a calça desde que chegou e estou muito satisfeito com o produto. Está exatamente como nas fotos, se encaixa perfeitamente, é muito confortável e de boa qualidade. Recomendo a compra sem problemas.", img:"http://127.0.0.1:5500/400x400.png"});
-theme.worker.testimonials.list.push({name : "Gabriela",rating: 5, description: "A calça ficou fabulosa, o acabamento é incrível, achei que ficaria mais curto por ser modelo cropped mas não, ficou perfeito. A entrega foi super rápida, comprei na segunda-feira e chegou no sábado. Recomendo a todos!", img:"http://127.0.0.1:5500/400x400.png"});
-theme.worker.testimonials.list.push({name : "Vanessa",rating: 5, description: "O produto é ótimo, estou usando há dois meses e já perdi 5 quilos. A entrega foi rápida e sem problemas. Recomendo!", img:"http://127.0.0.1:5500/400x400.png"});
-theme.worker.testimonials.list.push({name : "Amanda",rating: 5, description: "A calça preta é a minha preferida de todas! Uma peça clássica que nunca sai de moda, cores variadas, fica linda com camisetas xadrez e com t-shirts básicas.", img:"http://127.0.0.1:5500/400x400.png"});
-theme.worker.testimonials.list.push({name : "Fabíola",rating: 4, description: "A calça é linda, o tecido é de muito boa qualidade e a entrega foi rápida. Estou satisfeita com esse produto.", img:"http://127.0.0.1:5500/400x400.png"});
-theme.worker.testimonials.config = {title:"O que dizem por ai", ratingColor: "#f9d141", nameColor: "#000", descriptionColor:"#666", slidesDesktop: 3, slidesMobile: 1, target: "#blank-home-position3"};
-theme.worker.testimonials.match = $('.pagina-inicial').length > 0;
-theme.worker.testimonials.run = function(el){
-    var themeTestimonials = $('<div class="theme_worker-testimonials"></div>');    
-    themeTestimonials.append('<div class="titulo-categoria cor-principal"><strong>'+ theme.worker.testimonials.config.title +'</strong></div>');    
-    var themeTestimonialsList = $('<ul class="glide__slides" slides-md="'+ theme.worker.testimonials.config.slidesDesktop +'" slides-xs="'+ theme.worker.testimonials.config.slidesMobile +'"></ul>');
-    $.each(theme.worker.testimonials.list, function(k,item){
-        let li_ = $('<li></li>');
-        let li = $('<div></div>');
-        var content = $('<div class="content"></div>');
-        if(item.img != ""){li.append('<img src="'+item.img+'"/>');}
-        if(item.name != ""){content.append('<div><strong style="'+ (theme.worker.testimonials.config.nameColor != "" ? "color:" + theme.worker.testimonials.config.nameColor + ";": "") +'" >'+ item.name +'</strong></div>');}
-        if(item.description != ""){content.append('<div><p style="'+ (theme.worker.testimonials.config.descriptionColor != "" ? "color:" + theme.worker.testimonials.config.descriptionColor + ";": "") +'">'+ item.description +'</p></div>');}
-        if(item.rating != ""){
-            for(let i = 1; i<=5; i++ ){
-                content.append('<i style="'+ (theme.worker.testimonials.config.ratingColor != "" ? "color:" + theme.worker.testimonials.config.ratingColor + ";": "") +'" class="fa fa-star'+ (i<= item.rating ? '' : '-o') +'"></i>');
-            }            
-        }
-        li.append(content);
-        li_.append(li);        
-        themeTestimonialsList.append(li_);
-    });
-    themeTestimonials.append(themeTestimonialsList);
-    themeTestimonials.appendTo(theme.worker.testimonials.config.target);
-    $('.theme_worker-testimonials .glide__slides').wrap('<div class="glide__track" data-glide-el="track"></div>');
-    $('.theme_worker-testimonials .glide__track').wrap('<div class="glide" data-wait-mutation="false" data-autoplay="4000" data-per-view="'+ theme.worker.testimonials.config.slidesDesktop +'" data-per-view-sm="'+ theme.worker.testimonials.config.slidesMobile +'" ></div>');
+// theme.worker.testimonials = {};
+// theme.worker.testimonials.list = [];
+// theme.worker.testimonials.list.push({name : "Mariana",rating: 5, description: "Estou usando a calça desde que chegou e estou muito satisfeito com o produto. Está exatamente como nas fotos, se encaixa perfeitamente, é muito confortável e de boa qualidade. Recomendo a compra sem problemas.", img:"http://127.0.0.1:5500/400x400.png"});
+// theme.worker.testimonials.list.push({name : "Gabriela",rating: 5, description: "A calça ficou fabulosa, o acabamento é incrível, achei que ficaria mais curto por ser modelo cropped mas não, ficou perfeito. A entrega foi super rápida, comprei na segunda-feira e chegou no sábado. Recomendo a todos!", img:"http://127.0.0.1:5500/400x400.png"});
+// theme.worker.testimonials.list.push({name : "Vanessa",rating: 5, description: "O produto é ótimo, estou usando há dois meses e já perdi 5 quilos. A entrega foi rápida e sem problemas. Recomendo!", img:"http://127.0.0.1:5500/400x400.png"});
+// theme.worker.testimonials.list.push({name : "Amanda",rating: 5, description: "A calça preta é a minha preferida de todas! Uma peça clássica que nunca sai de moda, cores variadas, fica linda com camisetas xadrez e com t-shirts básicas.", img:"http://127.0.0.1:5500/400x400.png"});
+// theme.worker.testimonials.list.push({name : "Fabíola",rating: 4, description: "A calça é linda, o tecido é de muito boa qualidade e a entrega foi rápida. Estou satisfeita com esse produto.", img:"http://127.0.0.1:5500/400x400.png"});
+// theme.worker.testimonials.config = {title:"O que dizem por ai", ratingColor: "#f9d141", nameColor: "#000", descriptionColor:"#666", slidesDesktop: 3, slidesMobile: 1, target: "#blank-home-position3"};
+// theme.worker.testimonials.match = $('.pagina-inicial').length > 0;
+// theme.worker.testimonials.run = function(el){
+//     var themeTestimonials = $('<div class="theme_worker-testimonials"></div>');    
+//     themeTestimonials.append('<div class="titulo-categoria cor-principal"><strong>'+ theme.worker.testimonials.config.title +'</strong></div>');    
+//     var themeTestimonialsList = $('<ul class="glide__slides" slides-md="'+ theme.worker.testimonials.config.slidesDesktop +'" slides-xs="'+ theme.worker.testimonials.config.slidesMobile +'"></ul>');
+//     $.each(theme.worker.testimonials.list, function(k,item){
+//         let li_ = $('<li></li>');
+//         let li = $('<div></div>');
+//         var content = $('<div class="content"></div>');
+//         if(item.img != ""){li.append('<img src="'+item.img+'"/>');}
+//         if(item.name != ""){content.append('<div><strong style="'+ (theme.worker.testimonials.config.nameColor != "" ? "color:" + theme.worker.testimonials.config.nameColor + ";": "") +'" >'+ item.name +'</strong></div>');}
+//         if(item.description != ""){content.append('<div><p style="'+ (theme.worker.testimonials.config.descriptionColor != "" ? "color:" + theme.worker.testimonials.config.descriptionColor + ";": "") +'">'+ item.description +'</p></div>');}
+//         if(item.rating != ""){
+//             for(let i = 1; i<=5; i++ ){
+//                 content.append('<i style="'+ (theme.worker.testimonials.config.ratingColor != "" ? "color:" + theme.worker.testimonials.config.ratingColor + ";": "") +'" class="fa fa-star'+ (i<= item.rating ? '' : '-o') +'"></i>');
+//             }            
+//         }
+//         li.append(content);
+//         li_.append(li);        
+//         themeTestimonialsList.append(li_);
+//     });
+//     themeTestimonials.append(themeTestimonialsList);
+//     themeTestimonials.appendTo(theme.worker.testimonials.config.target);
+//     $('.theme_worker-testimonials .glide__slides').wrap('<div class="glide__track" data-glide-el="track"></div>');
+//     $('.theme_worker-testimonials .glide__track').wrap('<div class="glide" data-wait-mutation="false" data-autoplay="4000" data-per-view="'+ theme.worker.testimonials.config.slidesDesktop +'" data-per-view-sm="'+ theme.worker.testimonials.config.slidesMobile +'" ></div>');
+    
+//     new Glide('.theme_worker-testimonials .glide', {            
+//         type: 'carousel',
+//         gap:20,
+//         autoplay: 4000,
+//         perView: theme.worker.testimonials.config.slidesDesktop,
+//         breakpoints: {
+//             800: {
+//                 perView: theme.worker.testimonials.config.slidesMobile
+//             }
+//         }        
+//     }).mount();
+    
+//     console.log('theme.worker.testimonials OK');
+// };
 
-    //window.addEventListener('load', function () {
-    //setTimeout(() => {
-        new Glide('.theme_worker-testimonials .glide', {            
-            type: 'carousel',
-            gap:20,
-            autoplay: 4000,
-            perView: theme.worker.testimonials.config.slidesDesktop,
-            breakpoints: {
-                800: {
-                    perView: theme.worker.testimonials.config.slidesMobile
-                }
-            }        
-        }).mount();
-    //}, 1000);
-    //}); 
-    console.log('theme.worker.testimonials OK');
-};
-
-theme.worker.instaFeed = {};
-theme.worker.instaFeed.list = [];
-theme.worker.instaFeed.list.push({tokenFile:"https://ig.instant-tokens.com/users/b2ae8781-bac2-4194-b176-124cbc43e9d6/instagram/17841418540152784/token.js?userSecret=mz89bzc1jmbrdgcy52wwh"});
-theme.worker.instaFeed.config = {title:"Siga nosso Instagram",itemsToLoad: 8,itemsDesktop: 4, itemsMobile: 2, target:"#blank-home-position3"};
-theme.worker.instaFeed.match = $('.pagina-inicial').length > 0;
-theme.worker.instaFeed.run = function(el){
-    let script = document.createElement('script');
-    script.src = theme.worker.instaFeed.list.shift().tokenFile;
-    document.body.append(script);
-    script.onload = function() {
-        var themeInstafeed = $('<div class="theme_worker-instafeed"></div>');
-        themeInstafeed.append('<div class="titulo-categoria cor-principal"><strong>'+ theme.worker.instaFeed.config.title +'</strong></div>');
-        $.getJSON('https://graph.instagram.com/me/media?access_token='+ InstagramToken +'&fields=media_url,media_type,caption,permalink', function(arr){
-            var images = "";
-            for (let i = 0; i < theme.worker.instaFeed.config.itemsToLoad; i++) {
-                if(arr.data[i].media_type == "IMAGE"){
-                    images = images + "<div><a href='"+ arr.data[i].permalink +"'>" +
-                        "<img src='"+ arr.data[i].media_url +"'/>" + 
-                        //"<span>"+ arr.data[i].caption.substring(0,75) +"...</span>" +
-                    "</a></div>";
-                }
-            }
-            let css = "#instafeed > div{flex:0 0 "+ 100/theme.worker.instaFeed.config.itemsDesktop +"%;}@media(max-width:768px){#instafeed > div{flex:0 0 "+ 100/theme.worker.instaFeed.config.itemsMobile +"%;}}";
-            let style = document.createElement('style');
-            document.body.appendChild(style);
-            style.type = 'text/css';
-            if (style.styleSheet){
-                style.styleSheet.cssText = css;
-              } else {
-                style.appendChild(document.createTextNode(css));
-              }
+// theme.worker.instaFeed = {};
+// theme.worker.instaFeed.list = [];
+// theme.worker.instaFeed.list.push({tokenFile:"https://ig.instant-tokens.com/users/b2ae8781-bac2-4194-b176-124cbc43e9d6/instagram/17841418540152784/token.js?userSecret=mz89bzc1jmbrdgcy52wwh"});
+// theme.worker.instaFeed.config = {title:"Siga nosso Instagram",itemsToLoad: 8,itemsDesktop: 4, itemsMobile: 2, target:"#blank-home-position3"};
+// theme.worker.instaFeed.match = $('.pagina-inicial').length > 0;
+// theme.worker.instaFeed.run = function(el){
+//     let script = document.createElement('script');
+//     script.src = theme.worker.instaFeed.list.shift().tokenFile;
+//     document.body.append(script);
+//     script.onload = function() {
+//         var themeInstafeed = $('<div class="theme_worker-instafeed"></div>');
+//         themeInstafeed.append('<div class="titulo-categoria cor-principal"><strong>'+ theme.worker.instaFeed.config.title +'</strong></div>');
+//         $.getJSON('https://graph.instagram.com/me/media?access_token='+ InstagramToken +'&fields=media_url,media_type,caption,permalink', function(arr){
+//             var images = "";
+//             for (let i = 0; i < theme.worker.instaFeed.config.itemsToLoad; i++) {
+//                 if(arr.data[i].media_type == "IMAGE"){
+//                     images = images + "<div><a href='"+ arr.data[i].permalink +"'>" +
+//                         "<img src='"+ arr.data[i].media_url +"'/>" + 
+//                         //"<span>"+ arr.data[i].caption.substring(0,75) +"...</span>" +
+//                     "</a></div>";
+//                 }
+//             }
+//             let css = "#instafeed > div{flex:0 0 "+ 100/theme.worker.instaFeed.config.itemsDesktop +"%;}@media(max-width:768px){#instafeed > div{flex:0 0 "+ 100/theme.worker.instaFeed.config.itemsMobile +"%;}}";
+//             let style = document.createElement('style');
+//             document.body.appendChild(style);
+//             style.type = 'text/css';
+//             if (style.styleSheet){
+//                 style.styleSheet.cssText = css;
+//               } else {
+//                 style.appendChild(document.createTextNode(css));
+//               }
             
             
 
 
-            let feed = $('<div id="instafeed" mobile="'+ theme.worker.instaFeed.config.itemsMobile +'" desktop="'+ theme.worker.instaFeed.config.itemsDesktop +'"></div>');
-            feed.append(images);
-            themeInstafeed.append(feed);
-            themeInstafeed.appendTo(theme.worker.instaFeed.config.target);
-        });        
-    };
-    console.log('theme.worker.instaFeed OK');
-};
+//             let feed = $('<div id="instafeed" mobile="'+ theme.worker.instaFeed.config.itemsMobile +'" desktop="'+ theme.worker.instaFeed.config.itemsDesktop +'"></div>');
+//             feed.append(images);
+//             themeInstafeed.append(feed);
+//             themeInstafeed.appendTo(theme.worker.instaFeed.config.target);
+//         });        
+//     };
+//     console.log('theme.worker.instaFeed OK');
+// };
 
 theme.functions.init();
 theme.worker.run();

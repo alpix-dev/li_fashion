@@ -347,9 +347,10 @@ textarea:focus{
 #theme_header-functions > li > button,
 #theme_header-functions .carrinho > a,
 #theme_header-functions > li > a > svg,
-#theme_header-functions .carrinho > a > svg{
-    height:30px;
-    width:30px;
+#theme_header-functions .carrinho > a > svg,
+.search-trigger > svg{
+    height:24px;
+    width:24px;
     display:block;
     background:transparent;
     outline:none;
@@ -442,6 +443,12 @@ textarea:focus{
 .listagem ul[data-produtos-linha="4"] > li,
 .listagem ul:not([data-produtos-linha]) > li{
     width: calc(100% / 4);
+}
+.listagem ul[data-produtos-linha="3"] > li{
+    width: calc(100% / 3);
+}
+.listagem ul[data-produtos-linha="2"] > li{
+    width: calc(100% / 2);
 }
 .listagem ul li {
     padding: 0 10px;
@@ -593,7 +600,7 @@ textarea:focus{
 }
 #theme_list-functions > a:hover > svg{opacity:0;}
 #theme_list-functions > a > svg{
-    fill: var(--productButtonAddColor);
+    /* fill: var(--productButtonAddColor); */
     height: 26px;
     width: 100%;
     vertical-align: middle;
@@ -708,7 +715,8 @@ textarea:focus{
 #theme_sideCart #theme_sideCart-content .table-body td:nth-child(5) *,
 #theme_sideCart #theme_sideCart-content .table-body td:nth-child(3),
 #theme_sideCart #theme_sideCart-content .table-body td:nth-child(3) *{text-align:right;}
-#theme_sideCart #theme_sideCart-content .table-body td:nth-child(3) *{font-size:12px;}
+#theme_sideCart #theme_sideCart-content .table-body td:nth-child(3) *{font-size:12px;float:right;white-space:nowrap;margin:0;}
+#theme_sideCart #theme_sideCart-content .table-body td:nth-child(3) s{font-weight:300;}
 #theme_sideCart #theme_sideCart-content .table-body td:nth-child(3),
 #theme_sideCart #theme_sideCart-content .table-body td:nth-child(5){}
 #theme_sideCart #theme_sideCart-content .table-footer{box-shadow: 0 -5px 5px rgb(0 0 0 / 3%);}
@@ -1845,8 +1853,8 @@ body #rodape .gateways-rodape{
     #theme_header-functions > li:not(:first-child){margin-left:5px;}
 
     #theme_header-functions > li > a, #theme_header-functions > li > button, #theme_header-functions .carrinho > a, #theme_header-functions > li > a > svg, #theme_header-functions .carrinho > a > svg{
-        height:26px;
-        width:26px;
+        height:24px;
+        width:24px;
     }
     .menu.superior > .nivel-um,
     .menu.superior{display:block;}
@@ -1912,3 +1920,127 @@ body #rodape .gateways-rodape{
 /* GLIDE FIX */
 .glide__slides:after{display:none;}
 .glide__slides{margin:0;}
+
+/* NEW IDEAS */
+#apx_loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+	z-index: 99999999999999999999999999999999;
+}
+
+#apx_loader>div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.apx_preload {
+	border-radius: 5px;
+	min-height: 100px;
+	position: relative;
+	margin: 30px 0;
+}
+
+.apx_preload.loaded {
+	margin: 0;
+}
+
+.apx_preload.loaded:before,
+.apx_preload.loaded>.lds-ellipsis {
+	display: none!important;
+}
+
+.apx_preload:before {
+	content: "";
+	position: absolute;
+	border: 1px solid #f2f2f2;
+	box-shadow: 0px 0px 20px rgb(0 0 0 / 5%);
+	border-radius: 5px;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 9999;
+}
+
+.apx_preload>.lds-ellipsis {
+	z-index: 99999;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.apx_preload>.lds-ellipsis>div {
+	background: #666;
+}
+
+.lds-ellipsis {
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+}
+
+.lds-ellipsis div {
+	position: absolute;
+	top: 33px;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background: #fff;
+	animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+	left: 8px;
+	animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+	left: 8px;
+	animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+	left: 32px;
+	animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+	left: 56px;
+	animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes lds-ellipsis3 {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+
+@keyframes lds-ellipsis2 {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(24px, 0);
+	}
+}
+.lista-redes ul li{border-left:0;}
