@@ -26,9 +26,11 @@ theme.lang.footerTitle2 = "Categorias";
 theme.lang.footerTitle3 = "Pagamento e Segurança";
 theme.lang.footerTitle4 = "Newsletter";
 theme.lang.searchTitle = "O que você procura...";
+theme.lang.accountTitle = "Minha Conta";
 theme.lang.filtersTitle = "Filtrar por";
 theme.lang.menuTitle = "Menu";
 theme.lang.avisoEstoque = "Aproveite! Apenas [qtde] itens em estoque!";
+theme.lang.brandTitle = "Compre por Marca";
 
 theme.settings = {};
 theme.settings.whatsappButton = false;
@@ -82,6 +84,7 @@ theme.templates = [];
 //theme.templates.header[1] = '<div id="theme_header_1"><div class="conteiner-fluid"><div class="row-flex align-items-center"><div class="col" id="theme_header-logo"><button type="button" id="theme_header-menu-trigger"></button></div><div class="col-auto justify-content-center" id="theme_header-menu"></div><div class="col"><ul id="theme_header-functions"></ul></div></div></div><div id="theme_header-search"></div></div>';
 theme.templates.header = '<div id="theme_header_1"><div class="conteiner-fluid"><div class="row-flex align-items-center"><div class="col" id="theme_header-logo"><button type="button" id="theme_header-menu-trigger"></button></div><div class="col-auto justify-content-center" id="theme_header-menu"></div><div class="col"><ul id="theme_header-functions"></ul></div></div></div></div>';
 theme.templates.search = '<div class="theme_aside theme_search right"><div class="theme_aside-header"><button type="button" class="search-trigger" >'+ theme.icon.sideCartClose +'</button><span>'+ theme.lang.searchTitle +'</span></div><div class="theme_aside-content" id="theme_search"></div></div>';
+theme.templates.account = '<div class="theme_aside theme_account right"><div class="theme_aside-header"><button type="button" class="account-trigger" >'+ theme.icon.sideCartClose +'</button><span>'+ theme.lang.accountTitle +'</span></div><div class="theme_aside-content" id="theme_account"></div></div>';
 theme.templates.filter = '<div class="theme_aside theme_filter right"><div class="theme_aside-header"><button type="button" class="filter-trigger" >'+ theme.icon.sideCartClose +'</button><span>'+ theme.lang.filtersTitle +'</span></div><div class="theme_aside-content" id="theme_filter"></div></div>';
 theme.templates.footer = '<div class="row-flex justify-content-between"><div class="col-auto"><h4>'+ theme.lang.footerTitle1 +'</h4><div id="theme_footer-content1"></div></div><div class="col-auto"><h4>'+ theme.lang.footerTitle2 +'</h4><div id="theme_footer-content2"></div></div><div class="col-auto"><h4>'+ theme.lang.footerTitle3 +'</h4><div id="theme_footer-content3"></div></div><div class="col-auto"><h4>'+ theme.lang.footerTitle4 +'</h4><div id="theme_footer-content4"></div></div></div>';
 theme.templates.asideMenu = '<div class="theme_aside theme_menu left"><div class="theme_aside-header"><span>'+ theme.lang.menuTitle +'</span><button type="button" class="theme_menu-trigger" >'+ theme.icon.sideCartClose +'</button></div><div class="theme_aside-content" id="theme_menu-aside"></div></div>';
@@ -94,9 +97,9 @@ theme.build.header = function(template){
     $('#theme_header-menu').html(theme.headerMenu);
     $('#theme_header-functions').append('<li>' + theme.headerCart + '</li>');
 
-    $('#theme_header-functions').prepend('<li><a href="/conta/index">'+ theme.icon.account +'</a>');
-    $('#theme_header-functions').prepend('<li><a href="/conta/favorito/listar">'+ theme.icon.wishlist +'</a>');
-    $('#theme_header-functions').prepend('<li><button type="button" class="search-trigger">'+ theme.icon.search +'</button>');
+    $('#theme_header-functions').prepend('<li><button type="button" class="account-trigger">'+ theme.icon.account +'</button></li>');
+    //$('#theme_header-functions').prepend('<li><a href="/conta/favorito/listar">'+ theme.icon.wishlist +'</a></li>');
+    $('#theme_header-functions').prepend('<li><button type="button" class="search-trigger">'+ theme.icon.search +'</button></li>');
     
     $('.carrinho .icon-shopping-cart').before(theme.icon.cart);
     $('.carrinho .icon-shopping-cart').remove();
@@ -139,8 +142,6 @@ theme.build.productFilter = function(template){
         $('body').on('click','.filter-trigger', function(){   
             $('body').toggleClass('asideFilter-visible');         
         });
-        //$('#theme_filter').append(theme.searchForm);
-
         if($('.atributo-cor').length > 0 ){
             $('.atributo-cor span').each(function(){
                 let css = $(this).attr('style').replace('border-color','background-color');
@@ -151,7 +152,7 @@ theme.build.productFilter = function(template){
             let filterName = $(this).find('h4.titulo').text().replace('Filtrar por','').replace('Limpar','').trim();
             $('#theme_filter').append('<h4>' + filterName + '</h4>');
             $('#theme_filter').append($(this).find('h4.titulo').next());
-        })
+        });        
     }
 };
 
@@ -209,6 +210,27 @@ theme.build.search = function(template){
             return $("<li></li>").data("item.autocomplete", o).append("<a>" + o.label + "</a>").appendTo(n)
         }
     });
+};
+
+theme.build.account = function(template){
+    $('body').append(theme.templates.account);
+    let menu = $('<ul></ul>');
+    if(theme.isLogged){
+        menu.append('<li><a href="">Minha conta</a></li>');
+        menu.append('<li><a href="">Meus pedidos</a></li>');
+        menu.append('<li><a href="">Sair</a></li>');
+    }else{
+        menu.append('<li><a href="">Login</a></li>');
+        menu.append('<li><a href="">Cadastre-se</a></li>');
+    }
+    menu.append('<li class="divider"></li>');
+    menu.append('<li><a href="">Preciso de ajuda</a></li>');
+    menu.append('<li><a href="">Fale com a gente</a></li>');
+    $('#theme_account').append(menu);
+    $('.account-trigger').click(function(){   
+        $('body').toggleClass('asideAccount-visible');         
+    });
+
 }
 
 theme.functions = [];
@@ -251,6 +273,7 @@ theme.functions.init = function(){
     if($('.carrinho-checkout').length == 0){theme.build.header(2);theme.build.asideMenu();}
     theme.build.footer(1);
     theme.build.search(1);    
+    theme.build.account(1);    
     
 
     theme.functions.sideCartSet();
@@ -349,7 +372,9 @@ theme.functions.productListActions = function(){
         let id = $(this).attr('class').split(' ')[1].replace('prod-id-','').trim();
         let url = $(this).find('.info-produto > a:first-child').attr('href');        
         let block = $('<div id="theme_list-functions"></div>');
-        block.append($('<a href="/carrinho/produto/'+ id +'/adicionar" class="botao-comprar-ajax-custom" data-loading-text="<i class=\'icon-refresh icon-animate\'></i> Aguarde...">'+ theme.icon.cart +'<span>'+ theme.lang.productListAdd +'</span></a>'));
+        if($(this).find('.preco-a-partir').length == 0){
+            block.append($('<a href="/carrinho/produto/'+ id +'/adicionar" class="botao-comprar-ajax-custom" data-loading-text="<i class=\'icon-refresh icon-animate\'></i> Aguarde...">'+ theme.icon.cart +'<span>'+ theme.lang.productListAdd +'</span></a>'));
+        }        
         block.append($('<a href="'+ url +'">'+ theme.icon.seeMore +'<span>'+ theme.lang.productListDetail +'</span></a>'));
         $(this).find('.imagem-produto').prepend(block);        
     });
@@ -400,6 +425,11 @@ theme.functions.sideCartActions = function(html){
         }).always(function() { theme.functions.blockPage(false); })
     });
 
+    $('#theme_header-functions > li > .carrinho > a').click(function(e){
+        e.preventDefault();
+        $("#carrinho-mini").load("/carrinho/mini", function() {})
+    })
+
     $('body').on('click','#theme_sideCart [for="usarCupom"]',function(){
         $(this).next('.controls').toggle();
         theme.functions.sideCartScroll();
@@ -426,6 +456,9 @@ theme.functions['pagina-inicial'] = function(){
         $('.secao-principal > .conteudo').toggleClass('span9 span12');
         $('.secao-principal > .coluna').remove();
     }
+    if($('.marcas').length){
+        $('<div class="titulo-categoria cor-principal"><strong>'+ theme.lang.brandTitle +'</strong></div>').prependTo('.marcas');
+    }
 };
 
 theme.functions['pagina-categoria'] = function(){
@@ -446,12 +479,22 @@ theme.functions['pagina-categoria'] = function(){
     $('<button type="button" class="filter-trigger btn-icon">'+ theme.icon.filter +'<span>Filtrar Resultados</span></button>').appendTo('#theme_listing-filters');
     $('#theme_listing-info').html('<span>Página ' + '1 de 99' + ' exibindo ' + $('.listagem-item').length  + ' produtos.</span>' );        
 
+    if($('#theme_filter li.active').length > 0){
+        $('.filter-trigger > span').append('<i>'+ $('#theme_filter li.active').length +'</i>');
+    }
+
     if(!theme.isMobile){
         let h = $('#cabecalho').innerHeight() - 1;
         $('#theme_listing').addClass('sticky_this');
         $('#theme_listing').css('top', h + 'px');
 
     }
+
+    $('#theme_listing-filters a').each(function(){
+        if(window.location.href.indexOf($(this).attr('href')) >= 0){
+            $(this).css('font-weight','bold');
+        }
+    })
 };
 
 theme.functions['pagina-produto'] = function(){
