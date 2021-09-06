@@ -427,7 +427,11 @@ theme.functions.sideCartActions = function(html){
 
     $('#theme_header-functions > li > .carrinho > a').click(function(e){
         e.preventDefault();
-        $("#carrinho-mini").load("/carrinho/mini", function() {})
+        if($('#theme_sideCart #theme_sideCart-content').is(':empty')){
+            $("#carrinho-mini").load("/carrinho/mini", function() {})
+        }else{
+            theme.functions.sideCartToggle();
+        }
     })
 
     $('body').on('click','#theme_sideCart [for="usarCupom"]',function(){
