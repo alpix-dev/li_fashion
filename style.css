@@ -84,6 +84,7 @@
 
     }
 }
+body{opacity:0;}
 /* SETUP */
 #corpo,
 .secao-principal,
@@ -1003,7 +1004,7 @@ body #rodape .gateways-rodape{
 .produto .acoes-produto .preco-parcela{white-space:nowrap;}
 
 /* MARCAS */
-.marcas .slides li a{height:100px;}
+.marcas .slides li a{height:auto;}
 
 /* ASIDE */
 .theme_aside-shadow{
@@ -2063,3 +2064,87 @@ body #rodape .gateways-rodape{
     display: inline-block;
     margin-left: 5px;
 }
+#barraTopo{display:none!important}
+
+/* Slider */.slick-slider{position: relative; display: block; box-sizing: border-box; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: none; -khtml-user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent;}.slick-list{position: relative; display: block; overflow: hidden; margin: 0; padding: 0;}.slick-list:focus{outline: none;}.slick-list.dragging{cursor: pointer; cursor: hand;}.slick-slider .slick-track,.slick-slider .slick-list{-webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}.slick-track{position: relative; top: 0; left: 0; display: block; margin-left: auto; margin-right: auto;}.slick-track:before,.slick-track:after{display: table; content: '';}.slick-track:after{clear: both;}.slick-loading .slick-track{visibility: hidden;}.slick-slide{display: none; float: left; height: 100%; min-height: 1px;}[dir='rtl'] .slick-slide{float: right;}.slick-slide img{display: block;}.slick-slide.slick-loading img{display: none;}.slick-slide.dragging img{pointer-events: none;}.slick-initialized .slick-slide{display: block;}.slick-loading .slick-slide{visibility: hidden;}.slick-vertical .slick-slide{display: block; height: auto; border: 1px solid transparent;}.slick-arrow.slick-hidden{display: none;}
+
+.slick-slider * {
+	outline: 0!important
+}
+.slick-slider .arrow-l svg{transform: rotate(-90deg);height:30px;width:30px;}
+.slick-slider .arrow-r svg{transform: rotate(90deg);height:30px;width:30px;}
+.slick-slider .arrow-l,
+.slick-slider .arrow-r {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    line-height: 30px;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: -30px;
+    cursor: pointer;
+}
+
+.slick-slider .arrow-r {
+	left: auto;
+	right: -30px
+}
+
+.slick-dots {
+	position: absolute;
+	z-index: 9999;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+	padding: 0;
+	margin: 0 0 20px 0
+}
+
+.marcas .slick-slide > *,
+.marcas .slick-slide > * > *{display:block;margin:0 auto;text-align:center;}
+.marcas .slick-track {
+    display: flex;
+  }
+.marcas .slick-track .slick-slide {
+display: flex;
+height: auto;
+align-items: center;
+justify-content: center;
+}
+
+#carouselImagem .miniaturas .slick-slide{opacity:.5; transition:opacity .3s;}
+#carouselImagem .miniaturas .slick-slide.slick-active{opacity:1}
+
+.thumbs-vertical #carouselImagem .miniaturas li{
+    border:0;
+    margin:5px 0;
+    display:block;
+}
+.thumbs-horizontal #carouselImagem .miniaturas li{
+    border:0;
+    margin:0 5px;
+    display:block;
+}
+.thumbs-vertical #carouselImagem .miniaturas li.slick-slide{border:0!important}
+.thumbs-vertical #carouselImagem .miniaturas:not(.slick-slider){margin:-5px 0;}
+.thumbs-vertical #carouselImagem .miniaturas:not(.slick-slider) li{float:left;}
+.thumbs-vertical #carouselImagem .miniaturas.slick-slider{padding:40px 0;}
+.thumbs-horizontal #carouselImagem .miniaturas.slick-slider{padding:0;margin:0 40px;}
+.thumbs-vertical #carouselImagem .miniaturas .arrow-l{
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+}
+.thumbs-vertical #carouselImagem .miniaturas .arrow-l svg{transform:unset;}
+.thumbs-vertical #carouselImagem .miniaturas .arrow-r{
+    left: 50%;
+    bottom: 0;
+    top:auto;
+    transform: translate(-50%, 0);
+}
+.thumbs-vertical #carouselImagem .miniaturas .arrow-r svg{transform: rotate(180deg);}
+.thumbs-horizontal #carouselImagem .miniaturas .arrow-l{left:-40px;}
+.thumbs-horizontal #carouselImagem .miniaturas .arrow-r{right:-40px;}
