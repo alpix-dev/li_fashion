@@ -1542,6 +1542,9 @@ body #rodape .gateways-rodape{
 .resumo-compra.caixa-sombreada,
 .checkout-alerta-seguro .checkout-alerta-seguro-icon{display:none;}
 
+.caixa-sombreada .titulo,
+.caixa-sombreada legend{background:transparent;}
+.dados-acesso{background:unset;}
 .carrinho-checkout .campos-pedido > .campos-pedido > #login-content h3{
     text-align:left;
     margin-top:0;
@@ -2208,4 +2211,46 @@ justify-content: center;
     .secao-banners .conteiner .mini-banner .modulo:not(:last-child){margin-bottom:15px;}
     .tabela-carrinho .excluir a,
     #theme_sideCart #theme_sideCart-content .table-body td:nth-child(5) *{font-size:18px!important;}
+}
+
+#apx_sideLogin{
+    background: #f8f8f8;
+    margin: -5px -20px 5px -20px;
+    padding: 20px;
+}
+#apx_sideLogin label{
+    font-family: var(--menuFontFamily);
+    text-transform: var(--menuFontTransform);
+    font-weight: 600;
+    font-size: calc(var(--menuFontSize) * .8);
+    color: var(--menuFontColor);
+}
+#apx_sideLogin input:visited,
+#apx_sideLogin input:focus,
+#apx_sideLogin input:active{
+    background:#fff;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+#apx_sideLogin input{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    height: 34px;
+    margin-top: 5px;
+}
+#apx_sideLogin button{
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+#apx_sideLogin a{
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    color: var(--menuFontColor);
 }
