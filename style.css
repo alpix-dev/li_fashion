@@ -1929,9 +1929,9 @@ body #rodape .gateways-rodape{
     }
     .breadcrumbs{display:none}
 
-    .listagem ul[data-produtos-linha="4"] > li,
-    .listagem ul[data-produtos-linha="3"] > li,
-    .listagem ul[data-produtos-linha="2"] > li, .listagem ul:not([data-produtos-linha]) > li{
+    .listagem ul[data-produtos-linha="4"]:not(.produtos-carrossel) > li,
+    .listagem ul[data-produtos-linha="3"]:not(.produtos-carrossel) > li,
+    .listagem ul[data-produtos-linha="2"]:not(.produtos-carrossel) > li, .listagem ul:not([data-produtos-linha]) > li{
         width: calc(100% /2);
         margin:0;
     }

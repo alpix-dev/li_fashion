@@ -73,8 +73,7 @@ theme.settings.sliders.products = {
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,            
-            centerMode:true,
-            dots:true
+            centerMode:true
           }
         },
         {
@@ -82,8 +81,7 @@ theme.settings.sliders.products = {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            centerMode:true,
-            dots:true
+            centerMode:true
           }
         }
     ]  
@@ -105,7 +103,7 @@ theme.settings.sliders.verticalProductGallery = {
             slidesToShow: 3,
             slidesToScroll: 3,
             infinite: true,
-            dots: false,
+            
             centerMode:false
           }
         },
