@@ -2646,3 +2646,9 @@ html[alpix-theme] body.pagina-produto .secao-principal > .produto .destaque-parc
         transform: rotate(360deg);
     }
 }
+
+@media(max-width:990px){
+    .listagem .produtos-carrossel .listagem-linha,
+    .listagem .produtos-carrossel .listagem-linha .slick-slide,
+    .listagem .produtos-carrossel .listagem-linha .listagem-item{margin-top:0!important;padding-top:0;}
+}
