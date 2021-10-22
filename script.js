@@ -15,9 +15,10 @@
 var theme = [];
 
 theme.info = {};
-theme.info.icon = "<img src='https://www.alpix.dev/wp-content/uploads/2021/04/cropped-fav-32x32.png'/>";
-theme.info.name = "Tema Fashion";
-theme.info.external = "https://www.alpix.dev";
+theme.info.icon = '<svg style="height:22px;width:47px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 320.23 150.05"><defs><style>.cls-1{fill:#fc5656;}.cls-2{fill:#b32fd3;}.cls-3{fill:url(#Gradiente_sem_nome_49);}</style><linearGradient id="Gradiente_sem_nome_49" x1="-1021.91" y1="912.64" x2="-898.84" y2="912.64" gradientTransform="translate(1114.16 -837.62)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fc5656"/><stop offset="1" stop-color="#b32fd3"/></linearGradient></defs><g id="Camada_2" data-name="Camada 2"><g id="Camada_1-2" data-name="Camada 1"><rect x="215.32" y="40.9" width="19.21" height="70.65"/><rect x="92.25" width="19.11" height="111.55"/><path d="M167.15,39.84a36.48,36.48,0,0,0-17.37,4.38V41.07H130.59V150h19.19V108.58a36.56,36.56,0,1,0,17.37-68.74Zm0,53.87A17.32,17.32,0,1,1,184.47,76.4,17.31,17.31,0,0,1,167.15,93.71Z"/><path d="M53.83,111.37H73l0-70.48H53.87v3.3a36.76,36.76,0,0,0-17.31-4.36,36,36,0,0,0-11.7,1.93,36.55,36.55,0,0,0,0,69.26,36.43,36.43,0,0,0,23.4,0,34.82,34.82,0,0,0,5.61-2.43M36.56,94.13A17.32,17.32,0,1,1,53.87,76.81,17.31,17.31,0,0,1,36.56,94.13Z"/><polygon points="318.51 41.07 305.89 58.94 282.36 58.94 294.97 41.07 318.51 41.07"/><polygon points="320.23 111.55 296.55 111.55 282.36 92.17 268.77 111.55 245.22 111.55 270.5 75.69 270.6 75.55 258.79 58.94 246.09 41.07 269.77 41.07 282.36 58.94 282.38 58.94 294.19 75.69 294.24 75.69 320.23 111.55"/><rect class="cls-1" x="92.25" y="130.94" width="19.11" height="19.11"/><rect class="cls-2" x="196.11" width="19.21" height="19.21"/><rect class="cls-3" x="92.25" y="130.94" width="19.11" height="19.11"/><rect class="cls-3" x="196.11" width="19.21" height="19.21"/></g></g></svg>';
+theme.info.external = "https://www.alpix.dev?utm_source" + window.LOJA_ID;
+theme.info.ref = "https://www.alpix.dev/criar-sua-loja-integrada";
+theme.isMobile = window.innerWidth < 990;
 
 theme.lang = {};
 theme.lang.productListDetail = "Ver Mais";
@@ -27,7 +28,9 @@ theme.lang.footerTitle1 = "Institucional";
 theme.lang.footerTitle2 = "Categorias";
 theme.lang.footerTitle3 = "Pagamento e Segurança";
 theme.lang.footerTitle4 = "Newsletter";
-theme.lang.searchTitle = "O que você procura...";
+theme.lang.searchTitle = "Pesquisar";
+theme.lang.searchPlaceholder = "Digite o que procura...";
+theme.lang.searchButtonText = "Buscar";
 theme.lang.accountTitle = "Minha Conta";
 theme.lang.filtersTitle = "Filtrar por";
 theme.lang.menuTitle = "Menu";
@@ -35,6 +38,7 @@ theme.lang.avisoEstoque = "Aproveite! Apenas [qtde] itens em estoque!";
 theme.lang.brandTitle = "Compre por Marca";
 
 theme.settings = {};
+theme.settings.sideCheckout = true;
 theme.settings.whatsappButton = false;
 theme.settings.instagramFeed = false;
 theme.settings.productListImageFill = true;
@@ -55,6 +59,36 @@ theme.settings.sliders.brands = {
     prevArrow: theme.settings.sliders.config.prevArrow,
     nextArrow: theme.settings.sliders.config.nextArrow,
 }
+
+theme.settings.sliders.products = {
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: false,
+    prevArrow: theme.settings.sliders.config.prevArrow,
+    nextArrow: theme.settings.sliders.config.nextArrow,
+    responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,            
+            centerMode:true,
+            dots:true
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode:true,
+            dots:true
+          }
+        }
+    ]  
+}
+
 theme.settings.sliders.verticalProductGallery = {
     vertical:true,
     infinite: true,
@@ -64,6 +98,26 @@ theme.settings.sliders.verticalProductGallery = {
     autoplay: false,    
     prevArrow: theme.settings.sliders.config.prevArrow,
     nextArrow: theme.settings.sliders.config.nextArrow,
+    responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: false,
+            centerMode:false
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            centerMode:false
+          }
+        }
+    ]    
 }
 theme.settings.sliders.horizontalProductGallery = {
     infinite: true,
@@ -73,6 +127,26 @@ theme.settings.sliders.horizontalProductGallery = {
     autoplay: false,    
     prevArrow: theme.settings.sliders.config.prevArrow,
     nextArrow: theme.settings.sliders.config.nextArrow,
+    responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: false,
+            centerMode:false
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            centerMode:false
+          }
+        }
+      ]
 }
 theme.settings.sliders.premiumProductGallery = {
     infinite: true,
@@ -93,6 +167,7 @@ theme.settings.sliders.premiumProductGalleryNav = {
     nextArrow: theme.settings.sliders.config.nextArrow,
 }
 
+
 theme.isLogged = $('.bem-vindo > span').text() != "identifique-se" ? true : false;
 theme.logo = $('<div></div>').append($('#cabecalho .logo').clone()).html();
 theme.storePhone = $('.barra-inicial .canais-contato .icon-phone').parent().text().replace('Telefone: ','').trim();
@@ -100,8 +175,8 @@ theme.storeSkype = $('.barra-inicial .canais-contato .fa-skype').parent().text()
 theme.storeWhatsapp = $('.barra-inicial .canais-contato .fa-whatsapp').parent().text().replace('Whatsapp: ','').trim();
 theme.storeMail = "";
 
-//theme.primaryColor = $('[name="theme-color"]').attr('content');
-//if(theme.primaryColor){document.documentElement.style.setProperty('--primaryColor', theme.primaryColor);}
+theme.primaryColor = $('[name="theme-color"]').attr('content');
+if(theme.primaryColor){document.documentElement.style.setProperty('--primaryColor', theme.primaryColor);}
 
 //try{theme.secondaryColor = getComputedStyle(document.querySelector('.cor-secundaria')).color;}catch(e){console.log(e)}
 //if(theme.secondaryColor){document.documentElement.style.setProperty('--secondaryColor', theme.secondaryColor);}
@@ -115,7 +190,8 @@ theme.socialIcons = $('<div></div>').append($('.barra-inicial .lista-redes a').c
 theme.headerMenu = $('<div></div>').append($('.menu.superior').clone()).html();
 theme.footerCategories = $('<div></div>').append($('.links-rodape-categorias > ul').clone()).html();
 theme.footerPages = $('<div></div>').append($('.links-rodape-paginas > ul').clone()).html();
-theme.footerSeals = $('<div></div>').append($('#rodape .selos ul').clone()).html();
+
+theme.footerSeals = $('<div></div>').append($('#rodape .selos').clone()).html();
 theme.footerPayments = $('<div></div>').append($('#rodape .bandeiras-pagamento').clone()).html();
 theme.footerGateways = $('<div></div>').append($('#rodape .gateways-rodape').clone()).html();
 theme.headerCart = $('<div></div>').append($('#cabecalho .carrinho').clone()).html();
@@ -167,7 +243,11 @@ theme.build.footer = function(template){
     $('#theme_footer-content3').append(theme.footerPayments);
     $('#theme_footer-content3').append(theme.footerGateways);
     $('#theme_footer-content3').append(theme.footerSeals);
-    $('#theme_footer-content4').append(theme.newsletter);
+    
+    theme.newsletter == "" ? $('#theme_footer-content4').parent('.col-auto').remove() : $('#theme_footer-content4').append(theme.newsletter);
+    
+    $('#rodape .selos').find('.titulo').remove();
+    $('#rodape .selos').removeClass('span4')
 };
 theme.build.asideMenu = function(template){
     $('body').append(theme.templates.asideMenu);
@@ -191,18 +271,18 @@ theme.build.asideMenu = function(template){
 };
 
 theme.build.productFilter = function(template){
-    if($('.filtro-coluna').length > 0){
+    if($('.coluna .filtro-coluna').length > 0){
         $('body').append(theme.templates.filter);
         $('body').on('click','.filter-trigger', function(){   
             $('body').toggleClass('asideFilter-visible');         
         });
-        if($('.atributo-cor').length > 0 ){
-            $('.atributo-cor span').each(function(){
+        if($('.coluna .atributo-cor').length > 0 ){
+            $('.filtro-coluna .atributo-cor span').each(function(){
                 let css = $(this).attr('style').replace('border-color','background-color');
                 $(this).attr('style', css);
             })
         }
-        $('.filtro-coluna').each(function(){
+        $('.coluna .filtro-coluna').each(function(){
             let filterName = $(this).find('h4.titulo').text().replace('Filtrar por','').replace('Limpar','').trim();
             $('#theme_filter').append('<h4>' + filterName + '</h4>');
             $('#theme_filter').append($(this).find('h4.titulo').next());
@@ -213,6 +293,10 @@ theme.build.productFilter = function(template){
 theme.build.search = function(template){
     $('body').append(theme.templates.search);
     $('#theme_search').append(theme.searchForm);
+
+    $('#theme_search #auto-complete').attr('placeholder',theme.lang.searchPlaceholder);
+    $('#theme_search .botao.icon-search').text(theme.lang.searchButtonText);
+    $('#theme_search .botao.icon-search').removeClass('icon-search');
 
     $('.search-trigger').click(function(){   
         $('body').toggleClass('asideSearch-visible');         
@@ -270,9 +354,9 @@ theme.build.account = function(template){
     $('body').append(theme.templates.account);
     let menu = $('<ul></ul>');
     if(theme.isLogged){
-        menu.append('<li><a href="https://alpix-fashion.lojaintegrada.com.br/conta/index">Meus dados</a></li>');
-        menu.append('<li><a href="https://alpix-fashion.lojaintegrada.com.br/conta/pedido/listar">Meus pedidos</a></li>');
-        menu.append('<li><a href="https://alpix-fashion.lojaintegrada.com.br/conta/logout">Sair</a></li>');
+        menu.append('<li><a href="/conta/index">Meus dados</a></li>');
+        menu.append('<li><a href="/conta/pedido/listar">Meus pedidos</a></li>');
+        menu.append('<li><a href="/conta/logout">Sair</a></li>');
     }else{
         //menu.append('<li><a href="">Login</a></li>');
         menu.append('<li><form id="apx_sideLogin" action="/conta/login" method="post"><label>E-mail<input id="id_email" maxlength="128" name="email" type="text"></label><label>Senha<input id="id_senha" maxlength="32" name="senha" type="password"></label><div><button type="submit" class="botao principal">Entrar</button><a data-toggle="modal"> <i class="icon-lock cor-secundaria"></i> Esqueceu a senha? </a></div></form></li>');
@@ -317,7 +401,7 @@ theme.functions.createField = function (oObj){
 };
 theme.functions.init = function(){
     try{
-        $('html').attr('alpix-theme','fashion');
+        $('html').attr('alpix-theme',window.LOJA_ID);
         try{
             $(document).ready(function(){
                 theme.functions[theme.currentPage]();
@@ -345,7 +429,10 @@ theme.functions.init = function(){
         { threshold: [1] }
         );    
         observerMenu.observe(el);    
-        $('body').css('opacity','1')
+        $('body').css('opacity','1');
+        $('.theme_aside-shadow').click(function(){
+            $('body').removeClass('sideCart-visible').removeClass('asideSearch-visible').removeClass('asideMenu-visible').removeClass('asideAccount-visible');
+        })
     }catch(e){
         $('body').css('opacity','1')
     }
@@ -353,6 +440,22 @@ theme.functions.init = function(){
 theme.functions.unwrapProductList = function(){
     $('.listagem > ul > li > ul > li').attr('class','');
     $('.listagem-item').unwrap().unwrap().unwrap().wrap('<li/>');
+
+    if($('.listagem-linha.flexslider').length){
+        //$(window).load(function(){
+            $('.listagem-linha.flexslider').each(function(){
+                let listagemUL = $(this).parent('ul');
+                let listagemQtdLinhas = $(this).parent('ul').attr('data-produtos-linha');
+                
+                theme.settings.sliders.products.slidesToShow = parseInt(listagemQtdLinhas);
+                theme.functions.flexDestroy($(this));
+                console.log(theme.settings.sliders.products);
+                listagemUL.find('.listagem-linha').apx_slick(theme.settings.sliders.products);
+    
+            })   
+        //})
+             
+    }
 };
 theme.functions.resizeBanners = function(){
     $('.secao-banners img').each(function(){
@@ -381,19 +484,14 @@ theme.functions.blockPage = function (status){
 //     })
 // }
 theme.watch = function(){
-    $(document).ajaxComplete(function(event, xhr, settings) {
-        if(settings.url === "/carrinho/mini"){
-            $('.modal-comprar-ajax-status').parent().hide();
-            $('.fancybox-lock').removeClass('fancybox-lock');
-            theme.functions.sideCart(xhr.responseText);
-        }
-    });
     $(window).resize(function(){
         theme.functions.sideCartScroll();
         theme.functions.productListImageSize(theme.settings.imageSize);
     });
-    $('#rodape > div:last-child a').attr('href','https://app.lojaintegrada.com.br/public/assinar?utm_source=partners&utm_campaign=399');
-    $('#rodape > div:last-child a').before('<a href="https://www.alpix.dev" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" id="Camada_1" style="width: 26px; height: 20px;" viewBox="0 0 245.73 149.51" data-name="Camada 1"><defs><style>.cls-1{fill:#211915;}.cls-2{fill:url(#Gradiente_sem_nome_12);}</style><linearGradient id="Gradiente_sem_nome_12" gradientUnits="userSpaceOnUse" x1="240.57" y1="139.95" x2="198.5" y2="97.88"><stop stop-color="#9400d3" offset="0"></stop><stop stop-color="#40e0d0" offset="1"></stop></linearGradient></defs><title>Code By - www.alpix.dev</title><path class="cls-1" d="M 69.53 149.51 a 65.74 65.74 0 0 1 -35 -9.69 A 70.48 70.48 0 0 1 9.34 113.16 Q 0 96.2 0 74.48 q 0 -21 8.86 -37.86 A 69 69 0 0 1 33.39 9.9 Q 49.07 0 69.53 0 a 77.81 77.81 0 0 1 23.3 3.5 a 62.24 62.24 0 0 1 19.58 10 V 4.4 h 57.16 V 145.11 H 112.41 v -11 a 76.89 76.89 0 0 1 -20.68 11.54 A 64.76 64.76 0 0 1 69.53 149.51 Z m 17.59 -48.37 A 27 27 0 0 0 100.8 97.7 a 24.54 24.54 0 0 0 9.34 -9.41 a 27.11 27.11 0 0 0 3.37 -13.53 a 26.6 26.6 0 0 0 -3.44 -13.61 a 25.36 25.36 0 0 0 -9.34 -9.34 a 26.62 26.62 0 0 0 -13.61 -3.44 a 27 27 0 0 0 -13.6 3.44 A 25.37 25.37 0 0 0 64 61.22 a 26.25 26.25 0 0 0 -3.51 13.54 A 26.64 26.64 0 0 0 63.9 88.29 a 24.84 24.84 0 0 0 9.48 9.41 A 27.32 27.32 0 0 0 87.12 101.14 Z"></path><rect class="cls-2" x="188.56" y="87.95" width="57.17" height="57.17"></rect></svg></a>')
+    $('#rodape > div:last-child a').attr('href',theme.info.ref);
+    $('#rodape > div:last-child a').before('<a href="'+ theme.info.external +'" target="_blank">'+ theme.info.icon +'</a>');
+
+    
     
 }
 
@@ -428,33 +526,32 @@ theme.functions.productListActions = function(){
         let url = $(this).find('.info-produto > a:first-child').attr('href');        
         let block = $('<div id="theme_list-functions"></div>');
         if($(this).find('.preco-a-partir').length == 0){
-            block.append($('<a href="/carrinho/produto/'+ id +'/adicionar" class="botao-comprar-ajax-custom" data-loading-text="<i class=\'icon-refresh icon-animate\'></i> Aguarde...">'+ theme.icon.cart +'<span>'+ theme.lang.productListAdd +'</span></a>'));
+            block.append($('<a href="/carrinho/produto/'+ id +'/adicionar" class="theme_buttonBuy-ajax">'+ theme.icon.cart +'<span>'+ theme.lang.productListAdd +'</span></a>'));
         }        
         block.append($('<a href="'+ url +'">'+ theme.icon.seeMore +'<span>'+ theme.lang.productListDetail +'</span></a>'));
         $(this).find('.imagem-produto').prepend(block);        
     });
 
-    $(document).on("click", ".botao-comprar-ajax-custom", function(o) {
+    $(document).on("click", ".theme_buttonBuy-ajax", function(o) {
         o.preventDefault();
         var n = $(this);
-        $(".botao-comprar-ajax-custom").button("loading");
+        let previousText = n.attr('text');
+        n.addClass("loading");
         $.ajax({
             url: $(this).attr("href").replace("https:", ""),
             dataType: "json"
         }).done(function(p) {
             if (p.status !== "sucesso") {
-                $("#comprar-ajax-status .erro .msg").text(p.mensagem);
-                $("#comprar-ajax-status .sucesso").hide();
-                $("#comprar-ajax-status .erro").show();
+                alert(p.mensagem);
             } else {
-                $("#comprar-ajax-status .sucesso").show();
-                $("#comprar-ajax-status .erro").hide();
-                $("#carrinho-mini").load("/carrinho/mini", function() {})
+                $("#theme_sideCart-content").load("/carrinho/mini", function() {
+                    theme.functions.sideCart()
+                })
             }
         }).fail(function(p) {
             window.location = n.attr("href")
-        }).always(function() {
-            $(".botao-comprar-ajax-custom").button("reset")
+        }).always(function() {            
+            n.text(previousText).removeClass("loading");
         })
     });
 }
@@ -474,7 +571,13 @@ theme.functions.sideCartActions = function(html){
             url: $(this).attr("href").replace("https:", ""),
             dataType: "json"
         }).done(function(q) {
-            $("#carrinho-mini").load("/carrinho/mini", function() {})
+            if (q.status !== "sucesso") {
+                alert(q.mensagem);
+            } else {
+                $("#theme_sideCart-content").load("/carrinho/mini", function() {
+                    theme.functions.sideCart()
+                })
+            }
         }).fail(function(q) {
             window.location = o
         }).always(function() { theme.functions.blockPage(false); })
@@ -483,7 +586,9 @@ theme.functions.sideCartActions = function(html){
     $('#theme_header-functions > li > .carrinho > a').click(function(e){
         e.preventDefault();
         if($('#theme_sideCart #theme_sideCart-content').is(':empty')){
-            $("#carrinho-mini").load("/carrinho/mini", function() {})
+            $("#theme_sideCart-content").load("/carrinho/mini", function() {
+                theme.functions.sideCart()
+            })
         }else{
             theme.functions.sideCartToggle();
         }
@@ -495,17 +600,20 @@ theme.functions.sideCartActions = function(html){
     });
 }
 theme.functions.sideCartSet = function(){
-    $('body').append('<div id="theme_sideCart-shadow"></div><div id="theme_sideCart"><div id="theme_sideCart-header"><button type="button" onclick="theme.functions.sideCartToggle()">'+ theme.icon.sideCartClose +'</button><span>'+ theme.lang.sideCartTitle +'</span></div><div id="theme_sideCart-content"></div><div id="theme_sideCart-footer"><a href="/carrinho/index" class="botao">Finalizar Compra</div></div></div>');    
+    //$('body').append('<div id="theme_sideCart-shadow"></div><div id="theme_sideCart"><div id="theme_sideCart-header"><button type="button" onclick="theme.functions.sideCartToggle()">'+ theme.icon.sideCartClose +'</button><span>'+ theme.lang.sideCartTitle +'</span></div><div id="theme_sideCart-content"></div><div id="theme_sideCart-footer"><a href="/carrinho/index" class="botao">Finalizar Compra</div></div></div>');    
+    $('body').append('<div id="theme_sideCart" class="theme_aside right"><div class="theme_aside-header" id="theme_sideCart-header"><button type="button" onclick="theme.functions.sideCartToggle()">'+ theme.icon.sideCartClose +'</button><span>'+ theme.lang.sideCartTitle +'</span></div><div id="theme_sideCart-content"></div><div id="theme_sideCart-footer"><a href="/carrinho/index" class="botao principal botao-comprar">Finalizar Compra</div></div></div>');    
 }
-theme.functions.sideCart = function(html){
-    $('#theme_sideCart-content').html(html);
+theme.functions.sideCart = function(){
+    //$('#theme_sideCart-content').html(html);
     $('body').addClass('sideCart-visible');  
     theme.functions.sideCartScroll();  
 }
 
 theme.functions.sideCartToggle = function(){
     if($('#theme_sideCart-content:empty').length){
-        $("#carrinho-mini").load("/carrinho/mini", function() {});
+        $("#theme_sideCart-content").load("/carrinho/mini", function() {
+            theme.functions.sideCart()
+        })
     }
     $('body').toggleClass('sideCart-visible');
 }
@@ -524,6 +632,7 @@ theme.functions['pagina-inicial'] = function(){
         $('.marcas .slides').apx_slick(theme.settings.sliders.brands);
         $('<div class="titulo-categoria cor-principal"><strong>'+ theme.lang.brandTitle +'</strong></div>').prependTo('.marcas');
     }
+    
 };
 
 theme.functions['pagina-categoria'] = function(){
@@ -538,33 +647,57 @@ theme.functions['pagina-categoria'] = function(){
     $('<div id="theme_listing-filters"></div>').appendTo('#theme_listing');
     $('#botaoOrdenar + ul').find('a').find('i').remove();
     $('#botaoOrdenar + ul').find('a').appendTo('#theme_listing-filters');
+    let currentPage = parseInt($('.pagination').first().find('.active > a').text().replaceAll('.',''));    
+    let lastPage = parseInt($('.pagination').first().find('li').eq(-2).text().replaceAll('.',''));
     $('.ordenar-listagem').remove();
-
     
     $('<button type="button" class="filter-trigger btn-icon">'+ theme.icon.filter +'<span>Filtrar Resultados</span></button>').appendTo('#theme_listing-filters');
-    $('#theme_listing-info').html('<span>Página ' + '1 de 99' + ' exibindo ' + $('.listagem-item').length  + ' produtos.</span>' );        
+
+    let selector = $('<select name="changePage"></select>');
+    for(i = 1; i <= lastPage; i ++){
+        let cleanUrl = window.location.pathname + window.location.search.split('&pagina')[0] + '&pagina=' + i;
+        selector.append('<option value="'+ cleanUrl +'" '+ (i == currentPage ? 'selected' : '') +'>'+ i +'</option>');
+    }
+
+    let listing = $('<span>Página <span class="selectorContainer"></span> de '+ lastPage + '. Exibindo ' + $('.listagem-item').length  + ' produtos.</span>');
+    
+    if(isNaN(currentPage)){
+        listing = $('<span>Exibindo ' + $('.listagem-item').length  + ' produtos.</span>');
+    }
+    
+    listing.find('.selectorContainer').append(selector);
+    $('#theme_listing-info').append(listing);        
 
     if($('#theme_filter li.active').length > 0){
         $('.filter-trigger > span').append('<i>'+ $('#theme_filter li.active').length +'</i>');
     }
 
-    if(!theme.isMobile){
-        // document.addEventListener("DOMContentLoaded", function() {
-        //     let h = $('#cabecalho').innerHeight() - 1;
-        //     $('#theme_listing').addClass('sticky_this');
-        //     $('#theme_listing').css('top', h + 'px');
-        // });
+
+    if(!theme.isMobile){        
+        document.addEventListener("DOMContentLoaded", function() {
+            let h = $('#cabecalho').innerHeight() - 1;
+            $('#theme_listing').addClass('sticky_this');
+            $('#theme_listing').css('top', h + 'px');
+        });
+        window.addEventListener('resize', function(event) {
+            let h = $('#cabecalho').innerHeight() - 1;
+            $('#theme_listing').addClass('sticky_this');
+            $('#theme_listing').css('top', h + 'px');
+        });
         window.addEventListener('load', function(event) {
             let h = $('#cabecalho').innerHeight() - 1;
             $('#theme_listing').addClass('sticky_this');
             $('#theme_listing').css('top', h + 'px');
         });
     }
-
     $('#theme_listing-filters a').each(function(){
         if(window.location.href.indexOf($(this).attr('href')) >= 0){
             $(this).css('font-weight','bold');
         }
+    });
+
+    $('#theme_listing [name="changePage"]').change(function(){
+        window.location.href = $(this).val();
     })
 };
 
@@ -587,7 +720,7 @@ theme.functions['pagina-produto'] = function(){
         });
     }    
 
-    if($('meta[name="description"]').attr('content').length > 0){
+    if($('meta[name="description"]').attr('content').length > 0 && !theme.isMobile){
         $('<p class="theme_excerpt">'+ $('meta[name="description"]').attr('content') +'</p>').insertAfter('.codigo-produto');
     }
     
@@ -641,12 +774,12 @@ theme.functions['pagina-produto'] = function(){
 };
 
 theme.functions['pagina-carrinho'] = function(){
-    $('.tabela-carrinho .excluir').each(function(){
-        $(this).insertAfter($(this).closest('tr').find('.quantidade'));
-    });
-    $('.tabela-carrinho thead tr th:last-child').remove();
-    $('.tabela-carrinho tbody tr[data-produto-id] td:last-child').remove();
-    $('.tabela-carrinho tbody tr:not([data-produto-id]) td[colspan="4"]').attr('colspan',3);
+    // $('.tabela-carrinho .excluir').each(function(){
+    //     $(this).insertAfter($(this).closest('tr').find('.quantidade'));
+    // });
+    //$('.tabela-carrinho thead tr th:last-child').remove();
+    //$('.tabela-carrinho tbody tr[data-produto-id] td:last-child').remove();
+    //$('.tabela-carrinho tbody tr:not([data-produto-id]) td[colspan="4"]').attr('colspan',3);
     
     if($('.carrinho-checkout').length > 0){
         $('.tabela-carrinho').insertBefore('#formas-pagamento-wrapper');
@@ -709,53 +842,53 @@ apx_analytics.onload = function() {
       'domains': [window.location.hostname]
     }
   });
-  console.log('Tracking - OK');
+  //console.log('Tracking - OK');
 };
 
-console.log('Settings and fixes file loaded');
+// console.log('Settings and fixes file loaded');
 
-try{
-    let url_string = window.location.href;
-    let url = new URL(url_string);
-    let active_support = url.searchParams.get("support");
-    let editor = url.searchParams.get("editor");
+// try{
+//     let url_string = window.location.href;
+//     let url = new URL(url_string);
+//     let active_support = url.searchParams.get("support");
+//     let editor = url.searchParams.get("editor");
 
-    if(editor){
-        let script = document.createElement('script');
-        //script.src = "https://cdn.jsdelivr.net/gh/alpix-dev/li_resources/editor.js"
-        script.src = "http://127.0.0.1:5500/editor.js"
-        document.head.append(script);
-        script.onload = function() {
-            console.log('Theme editor loaded');
-        };
+//     if(editor){
+//         let script = document.createElement('script');
+//         //script.src = "https://cdn.jsdelivr.net/gh/alpix-dev/li_resources/editor.js"
+//         script.src = "http://127.0.0.1:5500/editor.js"
+//         document.head.append(script);
+//         script.onload = function() {
+//             console.log('Theme editor loaded');
+//         };
 
-        let style = document.createElement('link');
-        style.href = "http://127.0.0.1:5500/editor.css";
-        style.rel  = 'stylesheet';
-        style.type = 'text/css';
-        style.media = 'all';
-        document.head.append(style);        
-    }
+//         let style = document.createElement('link');
+//         style.href = "http://127.0.0.1:5500/editor.css";
+//         style.rel  = 'stylesheet';
+//         style.type = 'text/css';
+//         style.media = 'all';
+//         document.head.append(style);        
+//     }
 
-    if(active_support){
-        let script = document.createElement('script');
-        script.src = "http://127.0.0.1:5500/support_script.js"
-        document.head.append(script);
-        script.onload = function() {
-            console.log('Local support script file loaded');
-        };
+//     if(active_support){
+//         let script = document.createElement('script');
+//         script.src = "http://127.0.0.1:5500/support_script.js"
+//         document.head.append(script);
+//         script.onload = function() {
+//             console.log('Local support script file loaded');
+//         };
     
-        let style = document.createElement('link');
-        style.href = "http://127.0.0.1:5500/support_style.css";
-        style.rel  = 'stylesheet';
-        style.type = 'text/css';
-        style.media = 'all';
-        document.head.append(style);
-        style.onload = function() {
-            console.log('Local support style file loaded');
-        };
-    }
-}catch(e){console.log(e)}
+//         let style = document.createElement('link');
+//         style.href = "http://127.0.0.1:5500/support_style.css";
+//         style.rel  = 'stylesheet';
+//         style.type = 'text/css';
+//         style.media = 'all';
+//         document.head.append(style);
+//         style.onload = function() {
+//             console.log('Local support style file loaded');
+//         };
+//     }
+// }catch(e){console.log(e)}
 
 
 theme.worker = {};
@@ -818,16 +951,6 @@ theme.worker.checkoutExtraFields.run = function(el){
     });
     console.log('theme.worker.checkoutExtraFields OK');
 }
-
-theme.worker.productTimer = {};
-theme.worker.productTimer.list = [];
-theme.worker.productTimer.list.push({product_id : 104378934,date_limit : "30/06/2021"});
-theme.worker.productTimer.list.push({product_id : 102680176,date_limit : "30/07/2021"});
-theme.worker.productTimer.config = {text:"Já vai acabar!", icon:"",backgroundColor: "#000",textColor:"#fff"};
-theme.worker.productTimer.match = $('.listagem-item').length > 0;
-theme.worker.productTimer.run = function(el){
-
-};
 
 // theme.worker.testimonials = {};
 // theme.worker.testimonials.list = [];
