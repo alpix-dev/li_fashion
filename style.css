@@ -1339,6 +1339,7 @@ body #rodape .gateways-rodape{
     font-weight: var(--titleFontWeight);
     font-size: calc(var(--titleFontSize) * 0.7);
     height: auto;
+    box-sizing:border-box
 }
 .pagina-produto .secao-principal > .produto > .row-fluid:first-child .acoes-produto[data-variacao-id=""][style="display: none;"]{display:none!important}
 .pagina-produto .secao-principal > .produto > .row-fluid:first-child .acoes-produto[style="display: block;"]:after,
@@ -2341,10 +2342,9 @@ input:-webkit-autofill:active  {
     .pagina-produto .codigo-produto{
         gap: 10px;
         flex-wrap: wrap;
-        border-top: 1px solid rgba(0,0,0,0.1);
-        border-bottom: 1px solid rgba(0,0,0,0.1);
-        padding: 10px 0;
-        margin-bottom:15px;
+        border-bottom: 1px solid #f8f8f8;
+        padding: 0 0 15px 0;
+        margin-bottom: 15px;
     }
     .produto .principal{padding:0;}
     .produto .principal .acoes-produto .preco-produto{
