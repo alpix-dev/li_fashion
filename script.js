@@ -440,19 +440,14 @@ theme.functions.unwrapProductList = function(){
     $('.listagem-item').unwrap().unwrap().unwrap().wrap('<li/>');
 
     if($('.listagem-linha.flexslider').length){
-        //$(window).load(function(){
-            $('.listagem-linha.flexslider').each(function(){
-                let listagemUL = $(this).parent('ul');
-                let listagemQtdLinhas = $(this).parent('ul').attr('data-produtos-linha');
-                
-                theme.settings.sliders.products.slidesToShow = parseInt(listagemQtdLinhas);
-                theme.functions.flexDestroy($(this));
-                console.log(theme.settings.sliders.products);
-                listagemUL.find('.listagem-linha').apx_slick(theme.settings.sliders.products);
-    
-            })   
-        //})
-             
+        $('.listagem-linha.flexslider').each(function(){
+            let listagemUL = $(this).parent('ul');
+            let listagemQtdLinhas = $(this).parent('ul').attr('data-produtos-linha');
+            theme.settings.sliders.products.slidesToShow = parseInt(listagemQtdLinhas);
+            theme.functions.flexDestroy($(this));
+            listagemUL.find('.listagem-linha').apx_slick(theme.settings.sliders.products);
+
+        })   
     }
 };
 theme.functions.resizeBanners = function(){
@@ -565,20 +560,30 @@ theme.functions.sideCartActions = function(html){
         theme.functions.blockPage(true);
         var n = $(this);
         var o = $(this).attr("href");
-        $.ajax({
-            url: $(this).attr("href").replace("https:", ""),
-            dataType: "json"
-        }).done(function(q) {
-            if (q.status !== "sucesso") {
-                alert(q.mensagem);
-            } else {
-                $("#theme_sideCart-content").load("/carrinho/mini", function() {
-                    theme.functions.sideCart()
-                })
-            }
-        }).fail(function(q) {
-            window.location = o
-        }).always(function() { theme.functions.blockPage(false); })
+        let hasZero = false;
+        if(o.includes('atualizar')){
+            hasZero = parseInt(o.split('atualizar/')[1]) == 0 ? true : false;
+        }
+        if(hasZero == true){
+            theme.functions.blockPage(false);
+            return false;
+        }else{
+            $.ajax({
+                url: $(this).attr("href").replace("https:", ""),
+                dataType: "json"
+            }).done(function(q) {
+                if (q.status !== "sucesso") {
+                    alert(q.mensagem);
+                } else {
+                    $("#theme_sideCart-content").load("/carrinho/mini", function() {
+                        theme.functions.sideCart()
+                    })
+                }
+            }).fail(function(q) {
+                window.location = o
+            }).always(function() { theme.functions.blockPage(false); })
+        }
+        
     });
 
     $('#theme_header-functions > li > .carrinho > a').click(function(e){
@@ -826,22 +831,22 @@ theme.functions.flexDestroy = function(oObj){
 //     alert("Error loading " + this.src);
 // };
 
-let apx_analytics = document.createElement('script');
-apx_analytics.src = "https://www.googletagmanager.com/gtag/js?id=G-V0HB6YB66J"
-document.head.append(apx_analytics);
-apx_analytics.onload = function() {
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  //ga('create', 'G-V0HB6YB66J');
-  //gtag('config', 'G-V0HB6YB66J', {'linker' : { 'domains' : [window.location.hostname] }});
-  gtag('config', 'G-V0HB6YB66J', {
-    'linker': {
-      'domains': [window.location.hostname]
-    }
-  });
-  //console.log('Tracking - OK');
-};
+// let apx_analytics = document.createElement('script');
+// apx_analytics.src = "https://www.googletagmanager.com/gtag/js?id=G-V0HB6YB66J"
+// document.head.append(apx_analytics);
+// apx_analytics.onload = function() {
+//   window.dataLayer = window.dataLayer || [];
+//   function gtag(){dataLayer.push(arguments);}
+//   gtag('js', new Date());
+//   //ga('create', 'G-V0HB6YB66J');
+//   //gtag('config', 'G-V0HB6YB66J', {'linker' : { 'domains' : [window.location.hostname] }});
+//   gtag('config', 'G-V0HB6YB66J', {
+//     'linker': {
+//       'domains': [window.location.hostname]
+//     }
+//   });
+//   //console.log('Tracking - OK');
+// };
 
 // console.log('Settings and fixes file loaded');
 
